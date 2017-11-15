@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, h1, h2, h3, p, div, ol, ul, input, button { margin: 0; padding: 0; }
+body { font-family: 'microsoft yahei', 'Arial', 'Helvetica', 'sans-serif'; text-align: center; -webkit-text-size-adjust: none; overflow-x: hidden; font-size: 1em; background:#fff; color: #404040}
+ol, ul, li { list-style: none; }
+a { text-decoration: none; }
+input, button,select, textarea { border: 0; outline: none; border-radius: 0; font-family: 'microsoft yahei' !important; }
+button { outline: 0; }
+.fl { float: left; }
+.fr { float: right !important; }
+img { border: none; border: 0; outline: none }
+i,b{font-weight: normal; font-style: normal;}
+.relative{position: relative;}
+.transition{transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;-webkit-transition:all .3s;}
+.hImg{height: 100%; width: auto; float: left; display: block;}
+.wImg{width: 100%; height: auto; float: left; display: block;}
+.box{width: 100%; height: auto; display: block; float: left; background: #fff;}
+.empty{width: 100%; height: 60px; float: left;}
+.none{display:none}
+
+.cover{width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 20; background: rgba(0,0,0,.2); display: none}
+
+.wrap{max-width:720px; min-width:320px; height:auto; margin:0 auto; position:relative}
+.nav{width:100%; height:54px; position:fixed; bottom:0; left:0; background:#fafafa; z-index:9; border-top: 1px solid #ccc}
+.nav a{float:left; display:block; width:25%; text-align:center; color:#404040; font-size:0.8em; margin-top:8px; position:relative}
+.nav a span{width:100%; float:left}
+.nav a img{height:20px}
+.nav .on{color:#c31a1f !important}
+
+.login-bg{background: url(../images/login-bg.jpg) no-repeat; background-size: cover; position: absolute; top: 0; right: 0; bottom:0; left: 0}
+.login-bg h1{color: #fff; margin: 24% 0; letter-spacing: 4px}
+.login-inp{width: 80%; height: 60px; margin: 0 0 10% 10% ;background: rgba(0,0,0,.5); border-radius: 60px;}
+.login-inp input{width: 60%; height: 30px; text-align: center; line-height: 30px; color: #fff; font-size: 1.2em; padding:0 20%; margin-top: 15px}
+.login-user input{background: url(../images/login-user.png) 20px center no-repeat; background-size: 30px}
+.login-psw input{background: url(../images/login-psw.png) 20px center no-repeat; background-size: 30px}
+::-webkit-input-placeholder {color: #fff}
+:-moz-placeholder {color: #fff}
+::-moz-placeholder {color: #fff}
+:-ms-input-placeholder {color: #fff}
+.loagin-tools{width: 80%; height: 60px; margin: 0 0 10% 10% ;}
+.loagin-tools a{color: #fff; display: block; float: left; height: 60px; line-height: 60px}
+.loagin-tools input{border: 1px solid #fff; border-radius: 60px; height: 58px; padding: 0 20%; background: none; color: #fff; font-size: 1.2em; float: right;}
