@@ -18,6 +18,8 @@ i,b{font-weight: normal; font-style: normal;}
 .box{width: 100%; height: auto; display: block; float: left; background: #fff;}
 .empty{width: 100%; height: 60px; float: left;}
 .none{display:none}
+.h60{height: 60px; width: 100%;float: left;}
+.h50{height: 50px; width: 100%;float: left;}
 
 .cover{width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 20; background: rgba(0,0,0,.2); display: none}
 
@@ -29,15 +31,46 @@ i,b{font-weight: normal; font-style: normal;}
 .nav .on{color:#c31a1f !important}
 
 .login-bg{background: url(../images/login-bg.jpg) no-repeat; background-size: cover; position: absolute; top: 0; right: 0; bottom:0; left: 0}
-.login-bg h1{color: #fff; margin: 24% 0; letter-spacing: 4px}
+.login-bg h1{color: #fff; margin: 24% 0; letter-spacing: 4px; font-weight: normal;}
 .login-inp{width: 80%; height: 60px; margin: 0 0 10% 10% ;background: rgba(0,0,0,.5); border-radius: 60px;}
 .login-inp input{width: 60%; height: 30px; text-align: center; line-height: 30px; color: #fff; font-size: 1.2em; padding:0 20%; margin-top: 15px}
-.login-user input{background: url(../images/login-user.png) 20px center no-repeat; background-size: 30px}
-.login-psw input{background: url(../images/login-psw.png) 20px center no-repeat; background-size: 30px}
+.login-user input{background: url(../images/login-user.png) 20px center no-repeat; background-size: 25px}
+.login-psw input{background: url(../images/login-psw.png) 20px center no-repeat; background-size: 25px}
 ::-webkit-input-placeholder {color: #fff}
 :-moz-placeholder {color: #fff}
 ::-moz-placeholder {color: #fff}
 :-ms-input-placeholder {color: #fff}
 .loagin-tools{width: 80%; height: 60px; margin: 0 0 10% 10% ;}
-.loagin-tools a{color: #fff; display: block; float: left; height: 60px; line-height: 60px}
-.loagin-tools input{border: 1px solid #fff; border-radius: 60px; height: 58px; padding: 0 20%; background: none; color: #fff; font-size: 1.2em; float: right;}
+.loagin-tools a{color: #0072ff; display: block; float: left; height: 60px; line-height: 60px}
+.loagin-tools input{border: 1px solid #1c1c1c; border-radius: 60px; height: 58px; padding: 0 20%; background: none; color: #1c1c1c; font-size: 1.2em; float: right;}
+
+.swiper-wrap{width: 100%; float: left;}
+.swiper-wrap img{width: 100%}
+.box{width: 94%; height: auto; padding: 3%; float: left; text-align: left}
+.det-border{border-top: 5px solid #eee;border-bottom: 5px solid #eee;}
+.det-tit p{width: 100%; font-size: 1.2em; text-align: left}
+.det-tit span{width: 100%;display: block;color: #83a45f; text-align: left; margin-top: 2%}
+.det-green{width: 100%; float: left; background: #83a45f; font-size: 1.2em; height: 40px; line-height: 40px; text-align: center; color: #fff}
+.fixed-btn{width:100%; height:50px; line-height: 50px;position:fixed; bottom:0; left:0; background:#83a45f; z-index:9; color: #fff}
+.fixed-btn img{height: 20px; margin-right: 10px; position: relative; top: 3px}
+.wen{line-height: 24px}
+
+.user-top{width: 100%; height: auto; float: left; background: url(../images/user-bg.jpg) no-repeat; background-size: cover; padding: 20% 0}
+.user-top p{float: left; color: #fff; text-align: center; width: 100%; margin-top: 3%}
+.user-pic{width: 100%; height: 60px; float: left; text-align: center;}
+.user-pic img{width: 60px; height: 60px; border-radius: 60px}
+.user-name{font-size: 1.2em}
+.user-name i{width: 24px; height: 24px; line-height: 24px; font-size: .6em; border-radius: 24px; background: #ff9000; border: 1px solid #fff; display: inline-block; position: relative; top: -14px; left: 4px; font-style: italic;}
+.user-tel{font-size: 1em}
+.user-wen{font-size: .8em}
+.nav-box{width: 100%; height: auto; float: left; background: #fff;}
+.nav-box a {width: 100%; height: 51px; display: block; float: left; background: #fff;}
+.nav-box .left-pic {width: 20%; height: 51px; float: left; display: block; overflow: hidden; text-align: center}
+.nav-box .left-pic img {width: 26px; height: 26px; overflow: hidden; margin-top: 12px}
+.nav-box .right-main {width: 80%; display: block; float: right; text-align: center; text-align: left; position: relative; border-bottom: 1px solid #dcdcdc;height: 50px; line-height: 50px}
+.nav-box .right-main .tit1 {width: 60%; float: left; color: #1b1b1b}
+.nav-box .right-main .num1 {position: absolute; right: 5%; top: 0;height: 50px; color: #868686;}
+.nav-box .right-main i {width: 10%; height: 50px; line-height: 50px; text-align: center; font-weight: bold; color: #f6481e; float: right; margin-left: 8px}
+.nav-box .right-main i img {width: 9px; line-height: 50px; float: right; margin-top: 18px;}
+.nav-box a:last-child .right-main{border: none}
+.fixed-btn1{width:100%; height:50px; line-height: 50px;position:fixed; bottom:0; left:0; background:#fff; z-index:9; color: #f8360e}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title></title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+<style>
+html, body {
+    position: relative;
+    height: 100%;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="swiper-wrap">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/slide1.jpg"></div>
+                <div class="swiper-slide"><img src="images/slide2.jpg"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="box det-border det-tit">
+        <p>台上蛋糕机</p>
+        <span>￥ 3370.00</span>
+    </div>
+    <div class="det-green">商品详情</div>
+    <div class="box wen">
+法国万能牌moulinex 蛋糕机20000台，现货仓库，清仓处理中，<br>
+
+义乌市粤泰日用百货商行是一家专业致力于蛋糕机,家用蛋糕机的企业，坐落于浙江金华义乌市江东街道梅湖新村14栋23-24号，拥有先进的技术、优质的服务！我公司主要产品：馅饼机。我们面向金华，提供法国万能牌moulinex蛋糕机20000台服务。
+由于产品规格不同，价格也有所不同，请与我电话沟通，以免给你造成不必要的损失。
+    </div>
+    <div class="h60"></div>
+    <a class="fixed-btn" href=""><img src="images/icon-shop.png">加入购物车</a>
+</div>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    slidesPerView: 1,
+    paginationClickable: true,
+    spaceBetween: 0,
+    loop: true,
+    autoHeight: true,
+});
+</script>
+</body>
+</html>
