@@ -74,3 +74,28 @@ i,b{font-weight: normal; font-style: normal;}
 .nav-box .right-main i img {width: 9px; line-height: 50px; float: right; margin-top: 18px;}
 .nav-box a:last-child .right-main{border: none}
 .fixed-btn1{width:100%; height:50px; line-height: 50px;position:fixed; bottom:0; left:0; background:#fff; z-index:9; color: #f8360e}
+
+.shop-box{width: 100%; height: auto; border-top: 8px solid #eee}
+.shop-box input{width: 20px; height: 20px; margin-right: 5px;}
+.shop-box input[type=checkbox]{ -webkit-appearance: none;background: url(../images/icon-chk.png) no-repeat; background-size:contain}
+.shop-box input[type="checkbox"]:checked { background:url(../images/icon-chk1.png) no-repeat; background-size:contain}
+.shop-top{width: 94%; height: 40px; line-height: 40px; text-align: left; padding: 0 3%; background: #f8fafb}
+.shop-top a{color: #000}
+.shop-top a img{height: 14px; position: relative; top: 3px; margin-left: 8px}
+.shop-top input{position: relative; top: 5px; margin-right: 10px;}
+.shop-main{width: 94%; height: auto; padding: 3%; border-bottom: 1px solid #f3f3f3}
+.shop-main .chk{float: left; margin: 28px 3% 0 0 }
+.shop-main a{width: 79px; height: 79px;display: block;border-radius: 6px; overflow: hidden; border: 1px solid #d3d3d3; float: left; margin-right: 3%}
+.shop-main a img{width: 100%; height: 100%}
+.shop-right{text-align: left}
+.shop-right .tit{height: 48px; line-height: 24px; overflow: hidden}
+.shop-right .tools{height: 32px; line-height: 32px;}
+.shop-right .tools i{color: #83a45f}
+.shop-right .tools .num{width: 90px; height: 30px; border:1px solid #d3d3d3; display: block; float: right; border-radius: 4px}
+.shop-right .tools .cut,.shop-right .tools .add{width: 30px; height: 30px; display: block; float: left; text-align: center; font-size: 1.4em}
+.shop-right .tools input{width: 28px; height: 30px; line-height: 30px; text-align: center; margin: 0; float: left; border-left: 1px solid #d3d3d3; border-right: 1px solid #d3d3d3}
+.shop-btn{width:100%; height:50px; line-height: 50px;position:fixed; bottom:0; left:0; background:#fff; z-index:9; border-top: 1px solid #a0a0a0; text-align: left}
+.shop-btn input{width: 20px; height: 20px; margin-right: 5px; position: relative; top: 4px; margin-left: 3%; font-size: 1.2em}
+.shop-btn input[type=checkbox]{ -webkit-appearance: none;background: url(../images/icon-chk.png) no-repeat; background-size:contain}
+.shop-btn input[type="checkbox"]:checked { background:url(../images/icon-chk1.png) no-repeat; background-size:contain}
+.shop-btn a{background: #83a45f; color: #fff; height: 50px ; line-height: 50px; display: block; float: right; padding: 0 3%}

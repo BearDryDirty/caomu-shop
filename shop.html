@@ -10,7 +10,87 @@
 
 <body>
 <div class="wrap">
+  <div class="shop-box">
+    <div class="shop-top"><input type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
+    <div class="shop-main">
+      <input class="chk" type="checkbox">
+      <a href=""><img src="images/shop-pic.jpg" /></a>
+      <div class="shop-right">
+        <p class="tit">琥珀珍珠</p>
+        <p class="tools">
+          <i>¥ 13.00</i>
+          <span class="num">
+            <b class="cut" onclick="cut(this)">-</b>
+            <input type="tel" value="1" readonly class="add-num">
+            <b class="add" onclick="add(this)">+</b>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="shop-main">
+      <input class="chk" type="checkbox">
+      <a href=""><img src="images/shop-pic.jpg" /></a>
+      <div class="shop-right">
+        <p class="tit">琥珀珍珠琥珀珍珠琥珀珍珠琥珀珍珠</p>
+        <p class="tools">
+          <i>¥ 13.00</i>
+          <span class="num">
+            <b class="cut" onclick="cut(this)">-</b>
+            <input type="tel" value="1" readonly class="add-num">
+            <b class="add" onclick="add(this)">+</b>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
 
+  <div class="shop-box">
+    <div class="shop-top"><input type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
+    <div class="shop-main">
+      <input class="chk" type="checkbox">
+      <a href=""><img src="images/shop-pic.jpg" /></a>
+      <div class="shop-right">
+        <p class="tit">琥珀珍珠</p>
+        <p class="tools">
+          <i>¥ 13.00</i>
+          <span class="num">
+            <b class="cut" onclick="cut(this)">-</b>
+            <input type="tel" value="1" readonly class="add-num">
+            <b class="add" onclick="add(this)">+</b>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-btn">
+    <label for="all"><input id="all" type="checkbox"> 全选</label>
+    &nbsp;
+    合计：¥<span class="total">334.00</span>
+    <a href="">去结算（<i class="total-num">3</i>）</a>
+  </div>
 </div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+  function cut(obj){
+    var cutnum = $(obj).parent().find("input").val();
+    var num = cutnum -1;
+    if(num<0){
+      $(obj).parent().find("input").val("0")
+    }else{
+      $(obj).parent().find("input").val(num)
+    }
+  }
+
+  function add(obj){
+    var addnum = $(obj).parent().find("input").val();
+    var num = parseInt(addnum) + 1;
+    $(obj).parent().find("input").val(num)
+  }
+
+  $(function(){
+
+  })
+</script>
 </body>
 </html>
