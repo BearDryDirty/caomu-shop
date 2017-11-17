@@ -79,14 +79,14 @@
                 <b onclick="close_pop()" class="car-pop-close"><img class="wImg" src="images/icon-close.png"></b>
                 <img class="pic" src="images/shop-pic.jpg">
                 <span>￥ 36.00</span>
-                <i>商品编号：335454</i>
+                <i>商品编号：<b class="number"></b></i>
             </div>
             <div class="car-sel">
                 <p>尺码</p>
-                <label class="on"><input type="radio" name="sel" checked>新版0tv07</label>
-                <label><input type="radio" name="sel">新版0307</label>
-                <label><input type="radio" name="sel">新版007</label>
-                <label><input type="radio" name="sel">新版0dd07</label>
+                <label class="on"><input type="radio" name="sel" checked value="100*100">100*100</label>
+                <label><input type="radio" name="sel" value="200*200">200*200</label>
+                <label><input type="radio" name="sel" value="300*300">300*300</label>
+                <label><input type="radio" name="sel" value="400*400">400*400</label>
             </div>
             <div class="shop-right car-tools">
                 <p class="tools">
@@ -102,7 +102,9 @@
         </div>
     </div>
 </div>
+<input type="hidden" id="arrbox">
 <script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
   function cut(obj){
     var cutnum = $(obj).parent().find("input").val();
@@ -123,7 +125,8 @@
   function add_car(obj){
       var getClass = $(obj).parent().attr('class');
       var myid = getClass.replace(/id_/gm,'');
-      console.log(myid + "加入了购物车")
+      console.log(myid + "加入了购物车");
+      $(".number").text(myid);
       $(".car-pop").css({"top":"27.8%","height":"auto","overflow":"visible"});
       $(".shop-search").hide();
       $(".view-car").hide()
@@ -135,6 +138,17 @@
      $(".view-car").show()
   }
   function submit_pop(){
+      var id = $(".number").text();
+      var type = $("input[name='sel']:checked").val();
+      var num =$(".add-num").val();
+      var arrbox = $("#arrbox").val();
+      if(arrbox == ''){
+          var arrdata ='{"gid"' + ':"' + id + '"' + ',' + '"num"' + ':"' + type  + '"' + ',' + '"specs"' + ':"' + num + '"}' ;
+      }else{
+          var arrdata =arrbox +','+'{"gid"' + ':"' + id + '"' + ',' + '"num"' + ':"' + type  + '"' + ',' + '"specs"' + ':"' + num + '"}' ;
+      }
+    $("#arrbox").val(arrdata);
+    $.cookie('newarr', arrdata);
      $(".car-pop").css({"top":"120%","height":"0","overflow":"hidden"});
      $(".shop-search").show();
      $(".view-car").show()
@@ -151,5 +165,6 @@
       });
   })
 </script>
+
 </body>
 </html>
