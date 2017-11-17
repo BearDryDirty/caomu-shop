@@ -9,66 +9,98 @@
 </head>
 
 <body>
-<div class="wrap">
-  <div class="shop-box">
-    <div class="shop-top"><input type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
-    <div class="shop-main">
-      <input class="chk" type="checkbox">
-      <a href=""><img src="images/shop-pic.jpg" /></a>
-      <div class="shop-right">
-        <p class="tit">琥珀珍珠</p>
-        <p class="tools">
-          <i>¥ 13.00</i>
-          <span class="num">
-            <b class="cut" onclick="cut(this)">-</b>
-            <input type="tel" value="1" readonly class="add-num">
-            <b class="add" onclick="add(this)">+</b>
-          </span>
-        </p>
-      </div>
+<div class="wrap shop-bg">
+    <div class="shop-head">
+        <div class="s-box">
+            <div class="shop-search">
+                <form action="">
+                    <input class="shop-i" type="text" placeholder="输入商品名称">
+                    <input class="shop-b" type="submit" value="搜索">
+                </form>
+            </div>
+            <a class="view-car" href=""><img src="images/icon-car.png"><br>查<br>看<br>购<br>物<br>车</a>
+        </div>
     </div>
-    <div class="shop-main">
-      <input class="chk" type="checkbox">
-      <a href=""><img src="images/shop-pic.jpg" /></a>
-      <div class="shop-right">
-        <p class="tit">琥珀珍珠琥珀珍珠琥珀珍珠琥珀珍珠</p>
-        <p class="tools">
-          <i>¥ 13.00</i>
-          <span class="num">
-            <b class="cut" onclick="cut(this)">-</b>
-            <input type="tel" value="1" readonly class="add-num">
-            <b class="add" onclick="add(this)">+</b>
-          </span>
-        </p>
-      </div>
-    </div>
-  </div>
 
-  <div class="shop-box">
-    <div class="shop-top"><input type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
-    <div class="shop-main">
-      <input class="chk" type="checkbox">
-      <a href=""><img src="images/shop-pic.jpg" /></a>
-      <div class="shop-right">
-        <p class="tit">琥珀珍珠</p>
-        <p class="tools">
-          <i>¥ 13.00</i>
-          <span class="num">
-            <b class="cut" onclick="cut(this)">-</b>
-            <input type="tel" value="1" readonly class="add-num">
-            <b class="add" onclick="add(this)">+</b>
-          </span>
-        </p>
-      </div>
-    </div>
-  </div>
+    <dl class="shop-body">
+        <dd class="id_1">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+        <dd class="id_2">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+        <dd class="id_3">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+        <dd class="id_4">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+        <dd class="id_5">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+        <dd class="id_6">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+        <dd class="id_7">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+        <dd class="id_8">
+            <a class="fl" onclick="add_car(this)" href="javascript:void(0)">加入购物车</a>
+            <a class="fr" href="">查看详情</a>
+            <span class="shop-list-tit">琥珀珍珠</span>
+            <span>RMB: 123.00</span>
+        </dd>
+    </dl>
 
-  <div class="shop-btn">
-    <label for="all"><input id="all" type="checkbox"> 全选</label>
-    &nbsp;
-    合计：¥<span class="total">334.00</span>
-    <a href="">去结算（<i class="total-num">3</i>）</a>
-  </div>
+    <div class="car-pop transition">
+        <div class="s-box">
+            <div class="car-pop-top">
+                <b onclick="close_pop()" class="car-pop-close"><img class="wImg" src="images/icon-close.png"></b>
+                <img class="pic" src="images/shop-pic.jpg">
+                <span>￥ 36.00</span>
+                <i>商品编号：335454</i>
+            </div>
+            <div class="car-sel">
+                <p>尺码</p>
+                <label class="on"><input type="radio" name="sel" checked>新版0tv07</label>
+                <label><input type="radio" name="sel">新版0307</label>
+                <label><input type="radio" name="sel">新版007</label>
+                <label><input type="radio" name="sel">新版0dd07</label>
+            </div>
+            <div class="shop-right car-tools">
+                <p class="tools">
+                    数量
+                  <span class="num">
+                    <b class="cut" onclick="cut(this)">-</b>
+                    <input type="tel" value="1" readonly class="add-num">
+                    <b class="add" onclick="add(this)">+</b>
+                  </span>
+                </p>
+            </div>
+            <a onclick="submit_pop()" class="carfixed-btn" href="javascript:void(0)">确定</a>
+        </div>
+    </div>
 </div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
@@ -88,8 +120,35 @@
     $(obj).parent().find("input").val(num)
   }
 
-  $(function(){
+  function add_car(obj){
+      var getClass = $(obj).parent().attr('class');
+      var myid = getClass.replace(/id_/gm,'');
+      console.log(myid + "加入了购物车")
+      $(".car-pop").css({"top":"27.8%","height":"auto","overflow":"visible"});
+      $(".shop-search").hide();
+      $(".view-car").hide()
+  }
 
+  function close_pop(){
+     $(".car-pop").css({"top":"120%","height":"0","overflow":"hidden"});
+     $(".shop-search").show();
+     $(".view-car").show()
+  }
+  function submit_pop(){
+     $(".car-pop").css({"top":"120%","height":"0","overflow":"hidden"});
+     $(".shop-search").show();
+     $(".view-car").show()
+  }
+
+  $(function(){
+      $('.car-sel label').click(function () {
+          $(".car-sel label").each(function(){
+              $(this).removeClass('on');
+              $(this).find("input").attr('checked', false);
+          })
+          $(this).addClass('on');
+          $(this).find("input").attr('checked', true);
+      });
   })
 </script>
 </body>

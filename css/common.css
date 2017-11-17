@@ -23,7 +23,7 @@ i,b{font-weight: normal; font-style: normal;}
 
 .cover{width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 20; background: rgba(0,0,0,.2); display: none}
 
-.wrap{max-width:720px; min-width:320px; height:auto; margin:0 auto; position:relative}
+.wrap{max-width:640px; min-width:320px; height:auto; margin:0 auto; position:relative}
 .nav{width:100%; height:54px; position:fixed; bottom:0; left:0; background:#fafafa; z-index:9; border-top: 1px solid #ccc}
 .nav a{float:left; display:block; width:25%; text-align:center; color:#404040; font-size:0.8em; margin-top:8px; position:relative}
 .nav a span{width:100%; float:left}
@@ -99,3 +99,60 @@ i,b{font-weight: normal; font-style: normal;}
 .shop-btn input[type=checkbox]{ -webkit-appearance: none;background: url(../images/icon-chk.png) no-repeat; background-size:contain}
 .shop-btn input[type="checkbox"]:checked { background:url(../images/icon-chk1.png) no-repeat; background-size:contain}
 .shop-btn a{background: #83a45f; color: #fff; height: 50px ; line-height: 50px; display: block; float: right; padding: 0 3%}
+
+.shop-bg{background: url(../images/shop-bg.jpg) no-repeat; background-size: cover; position: absolute; top: 0; right: 0; bottom:0; left: 0}
+.shop-head{position: absolute; top: 0; left: 0; right: 0; bottom: 72.2%; background: url(../images/shop-icon.png) center center no-repeat; background-size: contain; z-index: 2}
+.shop-search{width: 60%; height: 30px; float: left; margin-left: 20%; background: #fff; position: absolute; bottom: 3%}
+.s-box{width: 100%; height: 100%; float: left; position: relative;}
+.shop-search .shop-i{width: 60%; height: 30px; padding: 0 0 0 5%; line-height: 30px; float: left}
+.shop-search .shop-b{width: 30%; height: 30px; line-height: 30px; color: #fff; background: #83a45f; float: right;}
+.view-car{width: 30px; height: auto; background: #fff; color: #000; border-radius: 8px; display: block; font-size: .6em; padding: 5px 0; position: absolute; right: 0; top: 50%; margin-top: -50px; line-height: 14px}
+.view-car img{width: 20px}
+.shop-body{position: absolute; top: 27.8%; left: 0; right: 0; bottom: 0; z-index: 2; margin: 0; overflow-y: scroll;}
+.shop-body dd{width: 44%; padding:6% 3%; border-bottom: 2px solid #a0a0a0; float: left; margin: 0; background: url(../images/line.png) right repeat-y}
+.shop-body dd:nth-of-type(2n){background: none}
+.shop-body dd a{width: 46%; border: 1px solid #fff; color: #fff; font-size: .8em; height: 26px; line-height: 26px; display: block;}
+.shop-body dd span{width: 100%; color: #fff; display: block; float: left; text-align: left; overflow: hidden; font-size: 1.2em}
+.shop-body .shop-list-tit{margin-top: 8%}
+
+.car-pop{position: absolute; top: 120%; left: 0; right: 0; bottom: 0; z-index: 6; margin: 0; background: #fff; height: 0; overflow: hidden;}
+.car-pop-top{width: 94%; height: auto;padding: 0 3%; border-bottom: 1px solid #d3d3d3; float: left}
+.car-pop-top .pic{width: 80px; height: 80px; position: relative; top: -20px; border-radius: 6px; border: 1px solid #d3d3d3; float: left}
+.car-pop-top span{width: 50%; height: auto; display: block; float: left; text-align: left; color: #f02828; margin: 18px 0 0 3%; font-weight: bold; font-size: 1.2em}
+.car-pop-top i{width: 50%; height: auto; display: block; float: left; text-align: left;font-size: .6em; color: #999; margin: 2px 0 0 3%}
+.car-pop-close{width: 18px; height: 18px; position: absolute; top: 10px; right: 10px}
+.car-sel{width: 96%; height: auto; padding:0 0 6% 3%; float: left ;border-bottom: 1px solid #d3d3d3;}
+.car-sel label{width: auto; height: 30px; padding: 0 8px; border: 1px solid #d3d3d3; position: relative; display: block; float: left;line-height: 30px;margin:3%  3% 0 0; border-radius: 6px}
+.car-sel label input{width: 0; height: 0; border: none; overflow: hidden; opacity: 0}
+.car-sel .on{border: 1px solid #83a45f; background: #83a45f; color: #fff}
+.car-sel p{text-align: left; margin: 6% 0 0 0; float: left; width: 100%}
+.car-tools{width: 94%; margin: 6% 0 0 3%; float: left}
+.carfixed-btn{width:100%; height:50px; line-height: 50px;position:absolute; bottom:0; left:0; background:#333; z-index:9; color: #fff}
+
+.completed-box{width: 94%; height: auto; padding: 3%; float: left}
+.completed-box .time{width: 100%; margin:0 0 3% 0; font-size: 1.2em; float: left}
+.com-list{width: 100%; height: 80px; display: block; float: left; border-radius: 6px; box-shadow: 0 0 5px rgba(0,0,0,.4); margin-top: 3%}
+.com-list .pic{width:60px; height: 60px; border-radius: 6px; overflow: hidden; margin: 10px 3% 0 10px; display: block; float: left}
+.com-list .pic img{width: 100%; height: 100%}
+.com-list .tit{text-align: left; color: #000; margin-top: 10px}
+.com-list .state{text-align: left; color: #999; margin-top: 20px; font-size: .8em}
+.com-list .price{height: 80px; line-height: 80px; float: right; margin-right: 10px; color: #666; font-weight: bold;}
+.fixed-com{width:100%; height:50px; line-height: 50px;position:fixed; bottom:0; left:0; background:#cecece; z-index:9; color: #fff}
+.fixed-com span{width: 50%;display: block; float: left; font-size: 1.2em}
+.fixed-com .total{background: #909090}
+
+.his-top{width: 100%; height: 38px; float: left;; line-height: 38px; font-size: 1.2em; color: #83a45f; border-bottom: 2px solid #83a45f; background: #fff}
+.his-box{width: 100%; height: auto; float: left; margin-top: 3%; background: #fff; position: relative;}
+.his-box .icon-com{width: 90px; height: 90px; position: absolute; top: 0; right: 50px; background: url(../images/icon-com.png) top center no-repeat;background-size: contain;}
+.his-box-top{width: 97%; height: 40px; float: left; padding-left: 3%; border-bottom: 1px solid #eee}
+.his-box-top a{display: block; float: left; color: #83a45f; height: 40px; line-height: 40px;}
+.his-box-top img{width: 20px; float: right; margin:10px 3% 0 0}
+.his-box-pic{width: 97%; height: auto; float: left; margin-left: 3%; padding-bottom: 6%}
+.his-box-pic a{width: 60px; height: 60px; overflow: hidden; border-radius: 6px; margin:6% 3% 0 0; display: block; float: left}
+.his-box-pic a img{width: 100%}
+.his-mes{width: 97%; float: right; padding: 0 3% 3% 0; text-align: right; border-bottom: 1px solid #eee}
+.his-mes span{font-size: 1.2em}
+.his-tools{width: 97%; float: left; padding: 3% 3% 6% 0}
+.his-tools a{padding: 0 12px; border-radius: 6px; display: block; float: right; margin-left: 6%; height: 30px; line-height: 30px}
+.his-tools .btn1{border: 1px solid #83a45f; color: #83a45f}
+.his-tools .btn2{border: 1px solid #000; color: #000}
