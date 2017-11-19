@@ -10,71 +10,116 @@
 
 <body>
 <div class="wrap">
-  <div class="shop-box">
-    <div class="shop-top"><input type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
-    <div class="shop-main">
-      <input class="chk" type="checkbox">
-      <a href=""><img src="images/shop-pic.jpg" /></a>
-      <div class="shop-right">
-        <p class="tit">琥珀珍珠</p>
-        <p class="type">100*100</p>
-        <p class="tools">
-          <i>¥ 13.00</i>
-          <span class="num">
-            <b class="cut" onclick="cut(this)">-</b>
-            <input type="tel" value="1" readonly class="add-num">
-            <b class="add" onclick="add(this)">+</b>
-          </span>
-        </p>
+    <div class="shop-box">
+      <div class="shop-top"><input onclick="chk_list_all(this)" class="chk" type="checkbox" name="sel"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
+      <div class="shop-main">
+        <input type="hidden" class="shop-id" value="231231243">
+        <input class="chk" type="checkbox" onclick="chk_one(this)">
+        <a href=""><img src="images/shop-pic.jpg" /></a>
+        <div class="shop-right">
+          <p class="tit">琥珀珍珠</p>
+          <p class="type">100*100</p>
+          <p class="tools">
+            <i>¥ 13.00</i>
+            <span class="num">
+              <b class="cut" onclick="cut(this)">-</b>
+              <input type="tel" value="1" readonly class="add-num">
+              <b class="add" onclick="add(this)">+</b>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="shop-main">
+        <input type="hidden" class="shop-id" value="423432">
+        <input class="chk" type="checkbox" onclick="chk_one(this)">
+        <a href=""><img src="images/shop-pic.jpg" /></a>
+        <div class="shop-right">
+          <p class="tit">琥珀珍珠琥珀珍珠琥珀珍珠琥珀珍珠</p>
+          <p class="type">100*100</p>
+          <p class="tools">
+            <i>¥ 13.00</i>
+            <span class="num">
+              <b class="cut" onclick="cut(this)">-</b>
+              <input type="tel" value="1" readonly class="add-num">
+              <b class="add" onclick="add(this)">+</b>
+            </span>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="shop-main">
-      <input class="chk" type="checkbox">
-      <a href=""><img src="images/shop-pic.jpg" /></a>
-      <div class="shop-right">
-        <p class="tit">琥珀珍珠琥珀珍珠琥珀珍珠琥珀珍珠</p>
-        <p class="type">100*100</p>
-        <p class="tools">
-          <i>¥ 13.00</i>
-          <span class="num">
-            <b class="cut" onclick="cut(this)">-</b>
-            <input type="tel" value="1" readonly class="add-num">
-            <b class="add" onclick="add(this)">+</b>
-          </span>
-        </p>
-      </div>
-    </div>
+
+  <div class="shop-box add-box">
+    <div class="shop-top"><input onclick="chk_list_all(this)" class="chk" type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
+
+
   </div>
 
-  <div class="shop-box">
-    <div class="shop-top"><input type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
-    <div class="shop-main">
-      <input class="chk" type="checkbox">
-      <a href=""><img src="images/shop-pic.jpg" /></a>
-      <div class="shop-right">
-        <p class="tit">琥珀珍珠</p>
-        <p class="type">100*100</p>
-        <p class="tools">
-          <i>¥ 13.00</i>
-          <span class="num">
-            <b class="cut" onclick="cut(this)">-</b>
-            <input type="tel" value="1" readonly class="add-num">
-            <b class="add" onclick="add(this)">+</b>
-          </span>
-        </p>
-      </div>
-    </div>
-  </div>
-
+ <div class="h60"></div>
   <div class="shop-btn">
-    <label for="all"><input id="all" type="checkbox"> 全选</label>
+    <label onclick="chk_all()" for="all"><input id="all" type="checkbox"> 全选</label>
     &nbsp;
-    合计：¥<span class="total">334.00</span>
-    <a href="">去结算（<i class="total-num">3</i>）</a>
+    合计：¥&nbsp;<span class="total">334.00</span>
+    <a onclick="buy()" href="javascript:void(0)">去结算（<i class="total-num">3</i>）</a>
   </div>
 </div>
 <script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
+function chk_all(){
+  if($("#all").is(':checked')){
+    $(".chk").attr("checked", true);
+  }else{
+    $(".chk").attr("checked", false);
+  }
+}
+
+function chk_list_all(obj){
+  if($(obj).is(':checked')){
+    $(obj).parent().parent().find(".chk").attr("checked", true);
+  }else{
+    $(obj).parent().parent().find(".chk").attr("checked", false);
+  };
+  chk1()
+}
+
+
+function chk_one(){
+    if($(this).find(".shop-main .chk").is(':checked')){
+      $(this).find(".shop-top .chk").attr("checked", true);
+
+    }else{
+      $(this).find(".shop-top .chk").attr("checked", false);
+    }
+  chk1()
+}
+
+function chk1(){
+  var chkval = 0;
+  var chklen = $(".chk").length;
+  $(".chk").each(function(){
+    if($(this).is(':checked')){
+     chkval = chkval +1
+    }else{
+
+    }
+  });
+  if(chkval == chklen){
+    $("#all").attr("checked", true);
+  }else{
+    $("#all").attr("checked", false);
+  }
+}
+
+
+  function total(){
+    var total_price = 0;
+    $(".shop-main").each(function(){
+      var price_one = parseInt($(this).find("i").text().replace(/¥ /,''));
+      var price_num=$(this).find(".add-num").val();
+      total_price =price_one * price_num + total_price
+    });
+    $(".total").text(total_price);
+  }
   function cut(obj){
     var cutnum = $(obj).parent().find("input").val();
     var num = cutnum -1;
@@ -82,17 +127,63 @@
       $(obj).parent().find("input").val("0")
     }else{
       $(obj).parent().find("input").val(num)
-    }
+    };
+    total()
   }
 
   function add(obj){
     var addnum = $(obj).parent().find("input").val();
     var num = parseInt(addnum) + 1;
-    $(obj).parent().find("input").val(num)
+    $(obj).parent().find("input").val(num);
+    total()
+  }
+
+  function buy(){
+    var buyarr=[];
+    $(".shop-box").each(function(){
+      $(this).find(".shop-main").each(function(){
+        var g,n,s;
+        g=$(this).find(".shop-id").val();
+        n=$(this).find(".type").text();
+        s=$(this).find(".add-num").val();
+        var buydata ='{"gid"' + ':"' + g + '"' + ',' + '"num"' + ':"' + n  + '"' + ',' + '"specs"' + ':"' + s + '"}'
+        buyarr.push(buydata);
+      })
+    })
+    console.log(buyarr)
   }
 
   $(function(){
-
+    var jsonStr = "[" +$.cookie("newarr")+"]";
+    var jsonObj =  JSON.parse(jsonStr);
+     for(var i in jsonObj){
+       var gid,num,specs;
+     var sarr = jsonObj[i];
+       for(var i in sarr){
+          gid=sarr["gid"];
+          num=sarr["num"];
+          specs=sarr["specs"];
+        }
+        $(".add-box").append(
+          "<div class='shop-main'>"+
+          "<input type='hidden' class='shop-id' value='"+ gid +"'>"+
+            "<input class='chk' type='checkbox'  onclick='chk_one(this)'>"+
+            "<a href=''><img src='images/shop-pic.jpg' /></a>"+
+            "<div class='shop-right'>"+
+              "<p class='tit'>"+"商品的id为："+ gid+"</p>"+
+              "<p class='type'>"+num+"</p>"+
+              "<p class='tools'>"+
+                "<i>¥ 13.00</i>"+
+                "<span class='num'>"+
+                  "<b class='cut' onclick='cut(this)'>-</b>"+
+                  "<input type='tel' value='"+ specs +"' readonly class='add-num'>"+
+                  "<b class='add' onclick='add(this)'>+</b>"+
+                "</span>"+
+              "</p>"+
+            "</div>"+
+          "</div>");
+      };
+      total();
   })
 </script>
 </body>
