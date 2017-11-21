@@ -14,11 +14,11 @@
         <div class="s-box">
             <div class="shop-search">
                 <form action="">
-                    <input class="shop-i" type="text" placeholder="输入商品名称">
+                    <input class="shop-i" type=text"" placeholder="输入商品名称">
                     <input class="shop-b" type="submit" value="搜索">
                 </form>
             </div>
-            <a class="view-car" href=""><img src="images/icon-car.png"><br>查<br>看<br>购<br>物<br>车</a>
+            <a class="view-car" href="shop-car.html"><img src="images/icon-car.png"><br>查<br>看<br>购<br>物<br>车</a>
         </div>
     </div>
 
@@ -141,13 +141,16 @@
       var id = $(".number").text();
       var type = $("input[name='sel']:checked").val();
       var num =$(".add-num").val();
-      var arrbox = $("#arrbox").val();
+      var arrbox = $.cookie("newarr");
+        if (typeof(arrbox)=="undefined") {
+            arrbox=''
+        }
       if(arrbox == ''){
           var arrdata ='{"gid"' + ':"' + id + '"' + ',' + '"num"' + ':"' + type  + '"' + ',' + '"specs"' + ':"' + num + '"}' ;
       }else{
           var arrdata =arrbox +','+'{"gid"' + ':"' + id + '"' + ',' + '"num"' + ':"' + type  + '"' + ',' + '"specs"' + ':"' + num + '"}' ;
       }
-    $("#arrbox").val(arrdata);
+
     $.cookie('newarr', arrdata);
      $(".car-pop").css({"top":"120%","height":"0","overflow":"hidden"});
      $(".shop-search").show();

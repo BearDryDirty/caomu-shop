@@ -10,13 +10,14 @@
 
 <body>
 <div class="wrap">
-    <div class="shop-box">
+    <!-- <div class="shop-box">
       <div class="shop-top"><input onclick="chk_list_all(this)" class="chk" type="checkbox" name="sel"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
       <div class="shop-main">
         <input type="hidden" class="shop-id" value="231231243">
         <input class="chk" type="checkbox" onclick="chk_one(this)">
         <a href=""><img src="images/shop-pic.jpg" /></a>
         <div class="shop-right">
+          <img src="images/icon-close.png" class="del">
           <p class="tit">琥珀珍珠</p>
           <p class="type">100*100</p>
           <p class="tools">
@@ -34,7 +35,8 @@
         <input class="chk" type="checkbox" onclick="chk_one(this)">
         <a href=""><img src="images/shop-pic.jpg" /></a>
         <div class="shop-right">
-          <p class="tit">琥珀珍珠琥珀珍珠琥珀珍珠琥珀珍珠</p>
+         <img src="images/icon-close.png" class="del">
+          <p class="tit">琥珀珍珠琥珀珍珠</p>
           <p class="type">100*100</p>
           <p class="tools">
             <i>¥ 13.00</i>
@@ -46,7 +48,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
   <div class="shop-box add-box">
     <div class="shop-top"><input onclick="chk_list_all(this)" class="chk" type="checkbox"><a href="">草木空间 <img src="images/right-arrow.png"></a></div>
@@ -71,6 +73,7 @@ function chk_all(){
   }else{
     $(".chk").attr("checked", false);
   }
+  total()
 }
 
 function chk_list_all(obj){
@@ -79,7 +82,8 @@ function chk_list_all(obj){
   }else{
     $(obj).parent().parent().find(".chk").attr("checked", false);
   };
-  chk1()
+  chk1();
+  total()
 }
 
 
@@ -90,7 +94,8 @@ function chk_one(){
     }else{
       $(this).find(".shop-top .chk").attr("checked", false);
     }
-  chk1()
+  chk1();
+  total()
 }
 
 function chk1(){
@@ -113,12 +118,17 @@ function chk1(){
 
   function total(){
     var total_price = 0;
+    var total_num=0;
     $(".shop-main").each(function(){
+        if($(this).find(".chk").is(":checked")){
       var price_one = parseInt($(this).find("i").text().replace(/¥ /,''));
+      total_num = total_num + parseInt($(this).find(".add-num").val());
       var price_num=$(this).find(".add-num").val();
       total_price =price_one * price_num + total_price
+      }
     });
     $(".total").text(total_price);
+    $(".total-num").text(total_num);
   }
   function cut(obj){
     var cutnum = $(obj).parent().find("input").val();
@@ -139,21 +149,58 @@ function chk1(){
   }
 
   function buy(){
-    var buyarr=[];
-    $(".shop-box").each(function(){
-      $(this).find(".shop-main").each(function(){
-        var g,n,s;
-        g=$(this).find(".shop-id").val();
-        n=$(this).find(".type").text();
-        s=$(this).find(".add-num").val();
-        var buydata ='{"gid"' + ':"' + g + '"' + ',' + '"num"' + ':"' + n  + '"' + ',' + '"specs"' + ':"' + s + '"}'
-        buyarr.push(buydata);
+      var totalbuy =$(".total-num").text();
+      if(totalbuy !=0){
+        var buyarr=[];
+        $(".shop-box").each(function(){
+          $(this).find(".shop-main").each(function(){
+            if($(this).find(".chk").is(":checked")){
+            var g,n,s;
+            g=$(this).find(".shop-id").val();
+            n=$(this).find(".type").text();
+            s=$(this).find(".add-num").val();
+            var buydata ='{"gid"' + ':"' + g + '"' + ',' + '"num"' + ':"' + n  + '"' + ',' + '"specs"' + ':"' + s + '"}'
+            buyarr.push(buydata);
+            $(this).remove();
+            total()
+          }
       })
-    })
-    console.log(buyarr)
+        })
+        console.log(buyarr)
+    }
+    newbuy()
   }
 
+ function newbuy(){
+    var new_arrdata='';
+     $(".shop-box").find(".shop-main").each(function(){
+        var new_gid,new_num,new_specs,new_pic;
+        new_gid = $(this).find(".tit").text();
+        new_num = $(this).find(".type").text();
+        new_specs = $(this).find(".add-num").val();
+        new_pic =$(this).find("a img").attr("src");
+        if(new_arrdata == ''){
+            new_arrdata ='{"gid"' + ':"' + new_gid + '"' + ',' + '"num"' + ':"' + new_num  + '"' + ',' + '"specs"' + ':"' + new_specs + '",' + '"images"' + ':"' + new_pic + '"}' ;
+        }else{
+            new_arrdata = new_arrdata +','+'{"gid"' + ':"' + new_gid + '"' + ',' + '"num"' + ':"' + new_num  + '"' + ',' + '"specs"' + ':"' + new_specs + '",' + '"images"' + ':"' + new_pic + '"}' ;
+        }
+
+        console.log(new_arrdata)
+    });
+    $.cookie('newarr', new_arrdata);
+ }
+
   $(function(){
+      $(".del").live("click",function(){
+          $(this).parents(".shop-main").remove();
+          $(".shop-box").each(function(){
+              var lennum = $(this).find(".shop-main").length;
+              if(lennum == 0){
+                  $(this).remove()
+              }
+          })
+          newbuy()
+      });
     var jsonStr = "[" +$.cookie("newarr")+"]";
     var jsonObj =  JSON.parse(jsonStr);
      for(var i in jsonObj){
@@ -170,7 +217,8 @@ function chk1(){
             "<input class='chk' type='checkbox'  onclick='chk_one(this)'>"+
             "<a href=''><img src='images/shop-pic.jpg' /></a>"+
             "<div class='shop-right'>"+
-              "<p class='tit'>"+"商品的id为："+ gid+"</p>"+
+             "<img src='images/icon-close.png' class='del'>"+
+              "<p class='tit'>"+ gid +"</p>"+
               "<p class='type'>"+num+"</p>"+
               "<p class='tools'>"+
                 "<i>¥ 13.00</i>"+

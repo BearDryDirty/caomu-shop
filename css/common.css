@@ -20,6 +20,7 @@ i,b{font-weight: normal; font-style: normal;}
 .none{display:none}
 .h60{height: 60px; width: 100%;float: left;}
 .h50{height: 50px; width: 100%;float: left;}
+input {-webkit-appearance:none; /*去除input默认样式*/}
 
 .cover{width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 20; background: rgba(0,0,0,.2); display: none}
 
@@ -36,10 +37,10 @@ i,b{font-weight: normal; font-style: normal;}
 .login-inp input{width: 60%; height: 30px; text-align: center; line-height: 30px; color: #fff; font-size: 1.2em; padding:0 20%; margin-top: 15px}
 .login-user input{background: url(../images/login-user.png) 20px center no-repeat; background-size: 25px}
 .login-psw input{background: url(../images/login-psw.png) 20px center no-repeat; background-size: 25px}
-::-webkit-input-placeholder {color: #fff}
-:-moz-placeholder {color: #fff}
-::-moz-placeholder {color: #fff}
-:-ms-input-placeholder {color: #fff}
+::-webkit-input-placeholder {color: #999}
+:-moz-placeholder {color: #999}
+::-moz-placeholder {color: #999}
+:-ms-input-placeholder {color: #999}
 .loagin-tools{width: 80%; height: 60px; margin: 0 0 10% 10% ;}
 .loagin-tools a{color: #0072ff; display: block; float: left; height: 60px; line-height: 60px}
 .loagin-tools input{border: 1px solid #1c1c1c; border-radius: 60px; height: 58px; padding: 0 20%; background: none; color: #1c1c1c; font-size: 1.2em; float: right;}
@@ -84,10 +85,10 @@ i,b{font-weight: normal; font-style: normal;}
 .shop-top a img{height: 14px; position: relative; top: 3px; margin-left: 8px}
 .shop-top input{position: relative; top: 5px; margin-right: 10px;}
 .shop-main{width: 94%; height: auto; padding: 3%; border-bottom: 1px solid #f3f3f3}
-.shop-main .chk{float: left; margin: 28px 3% 0 0 }
+.shop-main .chk{float: left; margin: 28px 3% 0 0 ; position: relative;z-index: 1}
 .shop-main a{width: 79px; height: 79px;display: block;border-radius: 6px; overflow: hidden; border: 1px solid #d3d3d3; float: left; margin-right: 3%}
 .shop-main a img{width: 100%; height: 100%}
-.shop-right{text-align: left}
+.shop-right{text-align: left; position: relative;}
 .shop-right .tit{height: 24px; line-height: 24px; overflow: hidden}
 .shop-right .type{height: 24px; line-height: 24px; overflow: hidden; color: #999; font-size: .8em}
 .shop-right .tools{height: 32px; line-height: 32px;}
@@ -95,6 +96,7 @@ i,b{font-weight: normal; font-style: normal;}
 .shop-right .tools .num{width: 90px; height: 30px; border:1px solid #d3d3d3; display: block; float: right; border-radius: 4px}
 .shop-right .tools .cut,.shop-right .tools .add{width: 30px; height: 30px; display: block; float: left; text-align: center; font-size: 1.4em}
 .shop-right .tools input{width: 28px; height: 30px; line-height: 30px; text-align: center; margin: 0; float: left; border-left: 1px solid #d3d3d3; border-right: 1px solid #d3d3d3}
+.shop-right .del{width: 16px; height: 16px; position: absolute; top: 0; right: 0}
 .shop-btn{width:100%; height:50px; line-height: 50px;position:fixed; bottom:0; left:0; background:#fff; z-index:9; border-top: 1px solid #a0a0a0; text-align: left}
 .shop-btn input{width: 20px; height: 20px; margin-right: 5px; position: relative; top: 4px; margin-left: 3%; font-size: 1.2em}
 .shop-btn input[type=checkbox]{ -webkit-appearance: none;background: url(../images/icon-chk.png) no-repeat; background-size:contain}
