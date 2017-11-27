@@ -101,11 +101,25 @@
             <a onclick="submit_pop()" class="carfixed-btn" href="javascript:void(0)">确定</a>
         </div>
     </div>
+    <div class="none" id="cover" onclick="closepop()">
+        <div class="jf-alert">
+            <p></p>
+            <span>领取成功</span>
+        </div>
+    </div>
 </div>
 <input type="hidden" id="arrbox">
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.cookie.js"></script>
 <script type="text/javascript">
+var cover = document.getElementById('cover');
+function pop(){
+    cover.setAttribute("class","");
+    setTimeout("closepop()",3000);
+};
+function closepop(){
+    cover.setAttribute("class","none");
+}
   function cut(obj){
     var cutnum = $(obj).parent().find("input").val();
     var num = cutnum -1;
@@ -138,6 +152,7 @@
      $(".view-car").show()
   }
   function submit_pop(){
+      pop();
       var id = $(".number").text();
       var type = $("input[name='sel']:checked").val();
       var num =$(".add-num").val();
